@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f4f6f9;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    nav button:hover {
+      background-color: #444;
+    }
+    .section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section.active {
+      display: block;
+    }
+    .portfolio-item {
+      margin-bottom: 30px;
+    }
+    .portfolio-item h3 {
+      margin-top: 15px;
+      color: #222;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Uninter - Portfólio Igor Martins
+  </header>
+  <nav>
+    <button onclick="showSection('sobre')">Sobre Mim</button>
+    <button onclick="showSection('formacao')">Formação e Idiomas</button>
+    <button onclick="showSection('portfolio')">Portfólio</button>
+    <button onclick="showSection('contato')">Contato</button>
+  </nav>
+  <div id="sobre" class="section active">
+    <h2>Sobre Mim</h2>
+    <p>Olá, Uninter! Meu nome é Igor Martins. Atualmente sou aluno de Análise e Desenvolvimento de Sistemas junto a Uninter, atuo na área de tecnologia como Coordenador de Operações na Stefanini, voltado à área de OSS. Tenho desejo de voltar minha carreira para o lado de desenvolvimento e ampliar meus conhecimentos. Tenho 5 anos de experiência na área de tecnologia e o curso tem sido muito bom para meu desenvolvimento.</p>
+  </div>
+  <div id="formacao" class="section">
+    <h2>Formação e Idiomas</h2>
+    <p>Sou aluno de Análise e Desenvolvimento de Sistemas na Uninter. Tenho inglês e espanhol em níveis intermediários. Tenho algumas certificações a nível de gestão de pessoas e projetos.</p>
+  </div>
+  <div id="portfolio" class="section">
+    <h2>Portfólio</h2>
+    <div class="portfolio-item">
+      <h3>Projeto 1: Cloud Support</h3>
+      <p>Desenvolvi em uma das minhas experiências profissionais um projeto de reestruturação da estrutura OnPremise para uma nova estrutura Cloud. O projeto foi uma virada de chave na minha carreira, pois revolucionou a estrutura tecnológica da empresa que eu atendia.</p>
+    </div>
+    <div class="portfolio-item">
+      <h3>Projeto 2: Open Source Tools</h3>
+      <p>Ainda neste cliente que atendi no passado, ampliei a gama de ferramentas internas da empresa, implementando uma série de ferramentas Open Source em um servidor Linux, que rodavam localmente com diferentes finalidades, dentre elas: Segurança, Inventário e Estoque, Controle de Demandas, etc...</p>
+    </div>
+    <div class="portfolio-item">
+      <h3>Projeto 3: Banco de Dados Relacional</h3>
+      <p>Desenvolvi um banco de dados relacional ao longo deste curso. O projeto inclui tabelas normalizadas para gerenciar veículos, manutenções, clientes e locações, além de consultas SQL para relatórios automatizados. Projeto idealizado com auxílio do ChatGPT.</p>
+    </div>
+  </div>
+  <div id="contato" class="section">
+    <h2>Contato</h2>
+    <p>Você pode entrar em contato comigo através do e-mail: <strong>igormartins87427@gmail.com</strong> ou pelo LinkedIn: <strong><a href="#" target="_blank">linkedin.com/in/igor-martins-50b1791a1/</a></strong>.</p>
+  </div>
+  <footer>
+    &copy; 2025 - Desenvolvido por Igor Martins
+  </footer>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
