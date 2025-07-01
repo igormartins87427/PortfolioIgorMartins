@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Portfólio</title>
   <style>
+    /* Reset de margens e paddings, além de aplicar uma fonte base para todo o site */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
+    /* Estilo do corpo do site */
     body {
       background: #f4f6f9;
       color: #333;
     }
+
+    /* Cabeçalho com título centralizado */
     header {
       background-color: #222;
       color: #fff;
@@ -23,12 +28,16 @@
       font-size: 28px;
       letter-spacing: 1px;
     }
+
+    /* Barra de navegação com botões centralizados */
     nav {
       background-color: #333;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
+
+    /* Estilização dos botões do menu */
     nav button {
       background: none;
       border: none;
@@ -38,25 +47,52 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
+
+    /* Efeito ao passar o mouse nos botões */
     nav button:hover {
       background-color: #444;
     }
+
+    /* Seções principais do conteúdo, inicialmente ocultas */
     .section {
       display: none;
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
     }
+
+    /* Seção ativa visível */
     .section.active {
       display: block;
     }
+
+    /* Container da seção Sobre Mim com layout em linha */
+    .sobre-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Texto ao lado da imagem na seção Sobre Mim */
+    .sobre-container .text {
+      flex: 1;
+      min-width: 300px;
+      text-align: justify;
+    }
+
+    /* Estilização de cada item de portfólio */
     .portfolio-item {
       margin-bottom: 30px;
     }
+
     .portfolio-item h3 {
       margin-top: 15px;
       color: #222;
     }
+
+    /* Rodapé com cor escura e centralizado */
     footer {
       text-align: center;
       padding: 20px;
@@ -64,48 +100,85 @@
       color: white;
       margin-top: 50px;
     }
+
+    /* Estilo da foto de perfil */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
   </style>
 </head>
 <body>
+  <!-- Cabeçalho principal -->
   <header>
     Uninter - Portfólio Igor Martins
   </header>
+
+  <!-- Menu de navegação -->
   <nav>
     <button onclick="showSection('sobre')">Sobre Mim</button>
     <button onclick="showSection('formacao')">Formação e Idiomas</button>
     <button onclick="showSection('portfolio')">Portfólio</button>
     <button onclick="showSection('contato')">Contato</button>
   </nav>
+
+  <!-- Seção Sobre Mim -->
   <div id="sobre" class="section active">
-    <h2>Sobre Mim</h2>
-    <p>Olá, Uninter! Meu nome é Igor Martins. Atualmente sou aluno de Análise e Desenvolvimento de Sistemas junto a Uninter, atuo na área de tecnologia como Coordenador de Operações na Stefanini, voltado à área de OSS. Tenho desejo de voltar minha carreira para o lado de desenvolvimento e ampliar meus conhecimentos. Tenho 5 anos de experiência na área de tecnologia e o curso tem sido muito bom para meu desenvolvimento.</p>
+    <h2 style="text-align: center; margin-bottom: 30px;">Sobre Mim</h2>
+    <div class="sobre-container">
+      <!-- Foto de perfil do lado esquerdo -->
+     <img src="img/perfil.jpeg" alt="Foto de perfil Igor Martins" class="profile-pic">
+
+      <!-- Texto sobre mim ao lado da foto -->
+      <div class="text">
+        <p>Olá, Uninter! Meu nome é Igor Martins. Atualmente sou aluno de Análise e Desenvolvimento de Sistemas junto à Uninter, atuo na área de tecnologia como Coordenador de Operações na Stefanini, voltado à área de OSS. Tenho desejo de voltar minha carreira para o lado de desenvolvimento e ampliar meus conhecimentos. Tenho 5 anos de experiência na área de tecnologia e o curso tem sido muito bom para meu desenvolvimento.</p>
+      </div>
+    </div>
   </div>
+
+  <!-- Seção de Formação e Idiomas -->
   <div id="formacao" class="section">
     <h2>Formação e Idiomas</h2>
     <p>Sou aluno de Análise e Desenvolvimento de Sistemas na Uninter. Tenho inglês e espanhol em níveis intermediários. Tenho algumas certificações a nível de gestão de pessoas e projetos.</p>
   </div>
+
+  <!-- Seção de Portfólio com três projetos descritos -->
   <div id="portfolio" class="section">
     <h2>Portfólio</h2>
+
+    <!-- Projeto 1 -->
     <div class="portfolio-item">
       <h3>Projeto 1: Cloud Support</h3>
       <p>Desenvolvi em uma das minhas experiências profissionais um projeto de reestruturação da estrutura OnPremise para uma nova estrutura Cloud. O projeto foi uma virada de chave na minha carreira, pois revolucionou a estrutura tecnológica da empresa que eu atendia.</p>
     </div>
+
+    <!-- Projeto 2 -->
     <div class="portfolio-item">
       <h3>Projeto 2: Open Source Tools</h3>
       <p>Ainda neste cliente que atendi no passado, ampliei a gama de ferramentas internas da empresa, implementando uma série de ferramentas Open Source em um servidor Linux, que rodavam localmente com diferentes finalidades, dentre elas: Segurança, Inventário e Estoque, Controle de Demandas, etc...</p>
     </div>
+
+    <!-- Projeto 3 -->
     <div class="portfolio-item">
       <h3>Projeto 3: Banco de Dados Relacional</h3>
       <p>Desenvolvi um banco de dados relacional ao longo deste curso. O projeto inclui tabelas normalizadas para gerenciar veículos, manutenções, clientes e locações, além de consultas SQL para relatórios automatizados. Projeto idealizado com auxílio do ChatGPT.</p>
     </div>
   </div>
+
+  <!-- Seção de Contato com links e e-mail -->
   <div id="contato" class="section">
     <h2>Contato</h2>
     <p>Você pode entrar em contato comigo através do e-mail: <strong>igormartins87427@gmail.com</strong> ou pelo LinkedIn: <strong><a href="#" target="_blank">linkedin.com/in/igor-martins-50b1791a1/</a></strong>.</p>
   </div>
+
+  <!-- Rodapé com direitos autorais -->
   <footer>
     &copy; 2025 - Desenvolvido por Igor Martins
   </footer>
+
+  <!-- Script responsável por alternar as seções visíveis -->
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll('.section');
